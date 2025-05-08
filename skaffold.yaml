@@ -9,9 +9,7 @@ profiles:
       artifacts:
         - image: junhanosc/sample-api
           jib:
-            project: .
-            toImage: junhanosc/sample-api
             args:
               - -DskipTests
-              - "-Djib.container.environment=SPRING_PROFILES_ACTIVE=dev"
+              - "-Djib.container.environment=SPRING_PROFILES_ACTIVE=dev"           
             fromImage: eclipse-temurin:17.0.2_8-jre
